@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 8 - Ejercicio Individual 19</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    
+    <h1>Crear factura</h1>
+
+    <form name="frmcrear" id="frmcrearid" action="#" method="POST">
+        ID Factura: <input type="text" name="txtidfact" id="txtidfact" /><br/>
+        ID Venta: <input type="text" name="txtidventa" id="txtidventa" /><br/>
+        Fecha generación: <input type="text" name="txtfechagen" id="txtfechagen" readonly="readonly" /><br/>
+        Fecha de pago: <input type="text" name="txtfechapago" id="txtfechapago" readonly="readonly" /><br/>
+        Subtotal: <input type="text" name="txtsubtotal" id="txtsubtotal" /><br/>
+        Impuesto: <input type="text" name="txtimpuesto" id="txtimpuesto" /><br/>
+        Total: <input type="text" name="txttotal" id="txttotal" /><br/>
+        <input type="submit" name="btnvalidar" id="btnvalidar" value="Crear factura" /><br/>
+    </form>
+
+    <script src="validaciones.js"></script>
+
+</body>
+</html>

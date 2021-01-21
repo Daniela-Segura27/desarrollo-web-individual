@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <title>Agregar Venta</title>
+</head>
+<body>
+    <form name="formulario" id="formulario">
+        <h2>Formulario para Agregar Venta</h2><br>
+        <div id="contenido">
+            <h2></h2>
+        </div>
+        <br>
+        ID Venta: <input type="text" name="idventa" id="idventa"><br><br>
+        Nombre Vendedor:<input name="nombre" type="text" id="nombre"><br><br>
+        Cantidad de Artículos:<input name="cant" type="text" id="cantidad"><br><br>
+        <input type="button" value="Enviar" onclick="validacion()">
+        <input type="reset" value="Limpiar">
+        
+    </form>
+
+    <script>
+        function validacion(){
+            venta = document.getElementById("idventa").value;
+            nombre =document.getElementById("nombre").value;
+            cantidad =document.getElementById("cantidad").value;
+
+            //Campos obligatorios
+            if (venta == null || venta.length == 0 || nombre == null ||nombre.length ==0||cantidad==null ||cantidad.length==0) {
+                document.getElementById("contenido").innerHTML ="ERROR! Debe completar todos los campos";
+            }else{
+                if(nombre == null || nombre.length == 0|| nombre.length >50){
+                    //alert('ERROR! Debe ingresar un nombre válido');  
+                    document.getElementById("contenido").innerHTML = "ERROR! Debe ingresar un nombre válido";
+                }else{
+                    if( isNaN(venta) || venta < 0 || venta > 1000){
+                        //alert('ERROR! Debe ingresar un número entre 0 y 1000'); 
+                        document.getElementById("contenido").innerHTML = "ERROR! Debe ingresar un número entre 0 y 1000";
+                    }else{
+                        if( isNaN(cantidad) || cantidad < 0 || cantidad > 1000){
+                            //alert('ERROR! Debe ingresar un número entre 0 y 1000'); 
+                            document.getElementById("contenido").innerHTML = "ERROR! Debe ingresar un número entre 0 y 1000";
+                        }else{
+                            //alert("Información enviada!");
+                            document.getElementById("contenido").innerHTML = "Información enviada!";
+                        }
+                    }
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

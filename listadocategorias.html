@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado categorias</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #resizable {
+      width: 150px;
+      height: 150px;
+      padding: 0.5em;
+    }
+
+    #resizable h3 {
+      text-align: center;
+      margin: 0;
+    }
+  </style>
+ 
+</head>
+
+<body>
+  <div id="resizable" class="ui-widget-content">
+    <h3 class="ui-widget-header">Listado de categorias</h3>
+  </div>
+  <div id="accordion">
+    <h3>Chocolito</h3>
+    <div>
+      <p>
+        Helado de crema sabor vainilla bañado en chocolate.
+      </p>
+      <div id="dialog" title="Listado de productos">
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+          </tr>
+          <tr>
+            <td>Chocolito</td>
+            <td>1000</td>
+          </tr>
+        </table>
+      </div>
+      <input type="button" value="Listar" id="opener">
+    </div>
+    <h3>Cremino</h3>
+    <div>
+      <p>
+        Helado de crema bañado en crema con crema.
+      </p>
+      <div id="dialog1" title="Listado de productos">
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+          </tr>
+          <tr>
+            <td>Cremino</td>
+            <td>1500</td>
+          </tr>
+        </table>
+      </div>
+
+      <input type="button" value="Listar" id="opener1">
+    </div>
+    <h3>Trululu</h3>
+    <div>
+      <p>
+        Helado de crema sabor chocolate y naranja.
+      </p>
+      <div id="dialog2" title="Listado de productos">
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+          </tr>
+          <tr>
+            <td>Trululu</td>
+            <td>3000</td>
+          </tr>
+        </table>
+      </div>
+      <input type="button" value="Listar" id="opener2">
+    </div>
+  </div>
+
+  <script src="listadocategorias.js"></script>
+</body>
+
+</html>

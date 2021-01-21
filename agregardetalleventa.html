@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <title>Agregar Detalle Venta</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            var venta ="";
+            var Producto ="";
+            var cantidad ="";
+        $("button").click(function(){
+
+        venta = document.getElementById("dv").value; 
+        
+        Producto = document.getElementById("Producto").value; 
+        cantidad = document.getElementById("cantidad").value;
+
+        if(venta == "" || Producto == "" || cantidad == ""){
+            alert("algunos de los campos esta vacio");
+        }
+        else{
+                    
+            if(cantidad < 1 || cantidad >1000){
+                alert("la cantidad debe ser entre 1 y 1000");
+            }
+            else{
+                $("#tabla").append("<tr><td>"+ venta +"</td><td>"+ Producto +"</td><td>"+ cantidad +"</td></tr>");
+            }
+        }
+        
+        });
+        });
+
+    </script>
+    
+
+</head>
+<body>
+    
+        <label for="dv">Venta</label> <br/>
+        <select id="dv" name="dv">
+        <option value="" selected="selected">- selecciona -</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+        <br>
+        <br>
+        <label for="Producto">Producto</label> <br/>
+        <select id="Producto" name="Producto">
+        <option value="" selected="selected">- selecciona -</option>
+        <option value="Paleta">Paleta</option>
+        <option value="Cono">Cono</option>
+        <option value="Copa">Copa</option>
+        </select>
+        <br>
+        <br>
+        <label for="cantidad" > Cantidad</label> <br/>
+        <input type="text" id="cantidad">
+        <br>
+        <br>
+        <button> Procesar </button>
+    
+        <div>
+            <table id="tabla">
+                <tr>
+                    <td>Venta</td>
+                    <td>Producto</td>
+                    <td>Cantidad</td>
+                </tr>
+            </table>
+        </div>
+
+</body>
+</html>

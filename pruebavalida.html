@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 8 - Ejercicio Individual 19</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    
+    <h1>Crear factura</h1>
+
+    <form name="frmcrear" id="frmcrearid" action="#" method="POST">
+        <table>
+            <tr>
+                <td>RUN</td>
+                <td><input type="text" name="run" id="run" /></td>
+            </tr>
+            <tr>
+                <td> Nombres </td>
+                <td> <input type="text" name="nombres" id="nombres"></td>
+            </tr>
+            <tr>
+                <td> Apellidos </td>
+                <td> <input type="text" name="apellidos" id="apellidos"> </td>
+            </tr>
+
+            <tr>
+                <td> Telefono </td>
+                <td> <input type="text" name="telefono" id="telefono"> </td>
+            </tr>
+
+            <tr>
+                <td> AFP </td>
+                <td> <label for="Tipo_afp">Seleccione una afp:</label>
+
+                    <select name="afps" id="afps">
+                        <option value="modelo">Modelo</option>
+                        <option value="provida">Provida</option>
+                        <option value="habitat">Habitat</option>
+                        <option value="capital">Capital</option>
+                        <option value="pal vital">Plan vital</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Sistema salud </td>
+                <td> <label for="Tipo_Salud">Seleccione un sistema de salud:</label>
+
+                    <select name="salud" id="salud">
+                        <option value="1">Fonasa</option>
+                        <option value="2">Isapre</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Direccion </td>
+                <td> <input type="text" name="direccion" id="direccion"> </td>
+            </tr>
+
+            <tr>
+                <td> Comuna </td>
+                <td> <input type="text" name="comuna" id="comuna"> </td>
+            </tr>
+
+            <tr>
+                <td> Edad </td>
+                <td> <input type="text" name="edad" id="edad"> </td>
+            </tr>
+
+        </table>
+        <br/>
+        
+        <!--<input type="submit" name="btnvalidar" id="btnvalidar" value="Crear factura" />-->
+        <button type="submit" name="btnvalidar" id="btnvalidar"><img src="C:\Users\Catherine\Documents\JAVA FullStack\ModuloIII\DIA7\Grupal_9\IMG\editar.png"
+            alt="x" /><br/></button>
+    </form>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("#txtfechagen").datepicker();
+            $("#txtfechapago").datepicker();
+
+            $("#btnvalidar").click(function(){
+
+                $("#frmcrearid").validate({
+                    rules:{
+                        run: {
+                            required: true,
+                            digits: true,
+                            max: 999999999,
+                            min: 11111111
+                        },
+                        nombres: {
+                            required: true
+                        },
+                        apellidos:{
+                            required: true
+                        },
+                        telefono:{
+                            required: true,
+                            digits:true
+                        },
+                        afps:{
+                            required: true,
+                        },
+                        salud:{
+                            required: true
+                        },
+                        direccion:{
+                            required: true
+                        },
+                        comuna:{
+                            required: true
+                        },
+                        edad:{
+                            required: true,
+                            digits:true,
+                            min: 0,
+                            max: 100
+                        }
+                    },
+                    messages:{
+                        run: {
+                            required: "El RUN es sin puntos ni guión",
+                            digits:"El campo debe ser numerico"
+                        },
+                        nombres: {
+                            required: "Debe ingresar sus nombres"
+                        },
+                        apellidos: {
+                            required: "Debe ingresar sus apellidos"
+                        },
+                        telefono: {
+                            required: "El campo no puede estar vacio",
+                            digits:"Debe ingresar un número"
+                        },
+                        afps: {
+                            required: "Debe seleccionar su AFP"
+                        },
+                        salud: {
+                            required: "Debe seleccionar su sistema de salud"
+                        },
+                        direccion: {
+                            required: "Debe ingresar su dirección"
+                        },
+                        comuna:{
+                            required: "Debe ingresar su comuna"
+                        },
+                        edad:{
+                            required: "Debe ingresar su edad",
+                            digits: "Debe ingresar un número"
+                        }
+
+                    }
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

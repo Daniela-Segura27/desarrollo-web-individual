@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+    <script src="funciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Ventas</title>
+    <script>
+        $(document).ready(function() {
+            $('#tbl').DataTable();
+        } );
+    </script>
+</head>
+<body>
+    
+        <table id="tbl" class= "table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID Ventas</th>
+                    <th>Nombre Vendedor</th>
+                    <th>Subtotal</th>
+                    <th>Impuesto</th>
+                    <th>Total</th>
+                    <th>Eliminar Productos</th>
+                    <th>Agregar Productos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Matias Sanhueza</td>
+                    <td>$14500</td>
+                    <td>$500</td>
+                    <td>$15000</td>
+                    <td><input type="image" src="IMG/eliminar.png" id="eliminar1" onclick="alertaEliminar()"></td>
+                    <td><input type="image" src="IMG/agregar.png" id="agregar1" onclick="alertaAgregar()"></td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Romina Rojas</td>
+                    <td>$13390</td>
+                    <td>$500</td>
+                    <td>$13890</td>
+                    <td><input type="image" src="IMG/eliminar.png" id="eliminar2" onclick="alertaEliminar()"></td>
+                    <td><input type="image" src="IMG/agregar.png" id="agregar2" onclick="alertaAgregar()"></td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Rodolfo Castillo</td>
+                    <td>$5150</td>
+                    <td>$500</td>
+                    <td>$5650</td>
+                    <td><input type="image" src="IMG/eliminar.png" id="eliminar3" onclick="alertaEliminar()"></td>
+                    <td><input type="image" src="IMG/agregar.png" id="agregar3" onclick="alertaAgregar()"></td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Andrea Fuentes</td>
+                    <td>$7850</td>
+                    <td>$500</td>
+                    <td>$8350</td>
+                    <td><input type="image" src="IMG/eliminar.png" id="eliminar4" onclick="alertaEliminar()"></td>
+                    <td><input type="image" src="IMG/agregar.png" id="agregar4" onclick="alertaAgregar()"></td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Pablo Perez</td>
+                    <td>$15600</td>
+                    <td>$500</td>
+                    <td>$16100</td>
+                    <td><input type="image" src="IMG/eliminar.png" id="eliminar5" onclick="alertaEliminar()"></td>
+                    <td><input type="image" src="IMG/agregar.png" id="agregar5" onclick="alertaAgregar()"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ID Ventas</th>
+                    <th>Nombre Vendedor</th>
+                    <th>Subtotal</th>
+                    <th>Impuesto</th>
+                    <th>Total</th>
+                    <th>Eliminar Productos</th>
+                    <th>Agregar Productos</th>
+                </tr>
+            </tfoot>
+           
+        </table>
+    
+   
+</body>
+</html>

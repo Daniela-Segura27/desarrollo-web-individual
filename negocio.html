@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <link rel="stylesheet" href="CSS/estilo.css">
+        <title>Negocio</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+    
+                $("#btn1").click(function () {
+                    $("#enlace").click();
+                });
+
+                $("#btn2").click(function () {
+                    $("#mp").click();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Pagina de mi negocio</h1>
+        <h3><strong>Historia del Negocio</strong></h3>
+        <div>
+        <p>
+            Emporio la Rosa nació el año 2001 como un pequeño almacén de barrio, en la calle Merced, 
+            pleno corazón del barrio patrimonial del casco antiguo de la capital. Su dueña Teresa 
+            Undurraga, quería ofrecer productos ricos y diferenciados a sus vecinos, así como también 
+            helados artesanales que se destacaran por su calidad y originalidad. Con el tiempo, 
+            este almacén se convirtió en una cafetería, que además de helados, ofrecía platos inspirados
+            en ingredientes y recetas típicas de la comida tradicional chilena, sorprendiendo con sabores 
+            caseros pero a la vez únicos que buscan relevar lo propio de la cultura chilena con una pizca 
+            de innovación.
+            <br>
+            <h3>Fundadores:</h3>
+            <ol type="A"> 
+                <li>Bayron Bravo</li>
+                <li>Daniela Segura</li>
+                <li>Antón Rubilar</li>
+                <li>Marcelo Gonzalez</li>
+                <li>Ricardo Olguin</li>
+                <li>Catherine Box</li>
+            </ol>
+        </p>
+        <a href="IMG/helados.jpg" data-fancybox="images" data-caption="helado1" >
+            <img src="IMG/helados.jpg" />
+        </a>
+        </div>
+        
+        <h3>Ubicación y Sucursales</h3>
+        <div>
+        <p>
+            Sucursal N°1: Emporio La Rosa Merced. Dirección: Merced, 291. Santiago.
+            <br>
+            Sucursal N°2: Emporio La Rosa Mall Espacio M. Dirección: Compañía de Jesús 1214, local N° 209, Santiago Centro.
+        </p>
+
+        
+        <a id="enlace" data-fancybox href="https://www.youtube.com/watch?v=JnFqveMoI-8"></a>
+        <input type="button" value="Ver video" id="btn1">
+        </div>
+        
+        <h3>Productos y Servicios disponibles</h3>
+        <div>
+        <p>
+            Nuestros Productos
+            <br>
+            Poseemos distintas variedades de helados, tales como: Crema, agua, sin azúcar
+
+        </p>
+        <iframe id="mp" data-fancybox src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106470.29357328589!2d-70.71562528610231!3d-33.49625982619742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e8e6926b368c908!2sHelados%20Artesanales!5e0!3m2!1ses-419!2scl!4v1608069273788!5m2!1ses-419!2scl" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      
+        <input type="button" value="Ver Mapa" id="btn2">
+        </div>
+        
+        <!--<button id="btn">Desplegar Secciones</button>--> 
+        
+        <h3>Referencias</h3>
+        <a href="https://heladostimaukel.cl" target="_blank">Referencia 1</a> 
+        <br>
+        <a href="http://www.palettas.cl" target="_blank">Referencia 2</a>
+        <br>
+        <a href="http://www.fortunata.cl" target="_blank">Referencia 3</a>
+
+
+    </body>
+</html>
